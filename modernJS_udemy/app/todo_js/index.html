@@ -1,0 +1,32 @@
+<!-- echo '' | pandoc -s -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="generator" content="pandoc" />
+  <title>Todo</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+  <div id="app"></div>
+  
+  <div class="input-area">
+    <input id="add-text" placeholder="input TODO" />
+    <button id="add-button">add</button>
+  </div>
+
+  <div class="incomplete-area">
+    <p class="title"> Incomplete TODO </p>
+    <ul id="incomplete-list"></ul>
+  </div>
+  
+  <div class="complete-area">
+    <p class="title"> Complete TODO </p>
+    <ul id="complete-list"></ul>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+</html>
