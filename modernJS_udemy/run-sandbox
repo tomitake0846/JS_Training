@@ -1,1 +1,1 @@
-docker run --rm -v $(pwd)/app:/app -it node:modernJS_udemy /bin/bash
+docker run --rm -v $(pwd)/app:/app -p 3000:3000 -it node:modernJS_udemy /bin/bash
