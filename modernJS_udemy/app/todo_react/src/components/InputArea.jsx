@@ -14,6 +14,11 @@ export const InputArea = (props) => {
   const {incompleteTodos,setIncompleteTodos} = props;
   const [todoText,setTodoText] = useState('');
   
+  //if incompleteTodos.length >= 5 ...
+  // * Do not allow input new todo item.
+  // * It shows a warning statement.
+  let disabled = (incompleteTodos.length >= 5); 
+
   const onChangeTodoText = (event) => {
     setTodoText(event.target.value);
   };
@@ -26,9 +31,12 @@ export const InputArea = (props) => {
   }
 
   return (
-      <div style={style}>
-        <input placeholder="input ToDo" value={todoText} onChange={onChangeTodoText}/>
-        <button onClick={() => onClickAdd()}>add</button>
-      </div>
+      <>
+        <div style={style}>
+          <input disabled={disabled} placeholder="input ToDo" value={todoText} onChange={onChangeTodoText}/>
+          <button disabled={disabled} onClick={() => onClickAdd()}>add</button>
+        </div>
+        {disabled && (<p style={{color: 'red'}}>A number of Todo Item has reached the upper limit.</p>)}
+      </>
   );
 }
