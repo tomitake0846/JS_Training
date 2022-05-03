@@ -1,5 +1,14 @@
 import React from 'react';
 
+const style = {
+  backgroundColor:'#c6ffe2',
+  width: '400px',
+  minHeight: '200px',
+  padding: '8px',
+  margin: '8px',
+  borderRadius: '8px',
+}
+
 export const CompleteArea = (props) => {
   const {incompleteTodos,completeTodos,setIncompleteTodos,setCompletedTodos} = props;  
 
@@ -14,7 +23,7 @@ export const CompleteArea = (props) => {
     setCompletedTodos(newCompletedTodos);
   }
   return (
-    <div className="complete-area" >
+    <div style={style}>
       <p className="title"> completed-ToDo </p>
       <ul>
       {completeTodos.map((todoName,index) => {

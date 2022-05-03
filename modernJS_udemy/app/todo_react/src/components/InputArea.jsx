@@ -1,6 +1,15 @@
 import React ,{useState} from 'react';
 import "../styles.css";
 
+const style = {
+  backgroundColor: '#c1ffff',
+  width: '400px',
+  height: '30px',
+  padding: '8px',
+  margin: '8px',
+  borderRadius: '8px',
+}
+
 export const InputArea = (props) => {
   const {incompleteTodos,setIncompleteTodos} = props;
   const [todoText,setTodoText] = useState('');
@@ -17,7 +26,7 @@ export const InputArea = (props) => {
   }
 
   return (
-      <div className="input-area">
+      <div style={style}>
         <input placeholder="input ToDo" value={todoText} onChange={onChangeTodoText}/>
         <button onClick={() => onClickAdd()}>add</button>
       </div>
